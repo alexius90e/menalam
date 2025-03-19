@@ -313,3 +313,204 @@ img {
   -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
           transform: translate3d(-50%, -50%, 0) rotate(45deg);
 }
+
+.first-screen {
+  padding: 36px 0 0;
+}
+.first-screen__tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 9px 16px;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #6b5100;
+  border-radius: 40px;
+  background-color: #fed350;
+}
+.first-screen__tag::before {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 20px;
+  aspect-ratio: 1/1;
+  background: url(..//assets/icons/heart.svg) center/cover no-repeat;
+}
+.first-screen__title {
+  max-width: 748px;
+  margin: 24px auto;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 120%;
+  text-align: center;
+  color: #33363c;
+}
+@media (max-width: 1024px) {
+  .first-screen__title {
+    font-size: 48px;
+  }
+}
+@media (max-width: 576px) {
+  .first-screen__title {
+    margin: 24px auto 16px;
+    font-size: 32px;
+  }
+}
+.first-screen__description {
+  max-width: 580px;
+  margin: 24px auto;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  color: #33363c;
+}
+@media (max-width: 1024px) {
+  .first-screen__description {
+    font-size: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .first-screen__description {
+    margin: 16px auto 24px;
+    font-size: 16px;
+  }
+}
+.first-screen__download {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+  margin: 0 0 24px;
+}
+@media (max-width: 576px) {
+  .first-screen__download {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 24px 0 32px;
+  }
+}
+.first-screen__download-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-radius: 50px;
+  background-color: #000000;
+}
+@media (max-width: 576px) {
+  .first-screen__download-link {
+    width: 100%;
+  }
+}
+.first-screen__download-link-image {
+  display: block;
+  max-width: 100%;
+  width: 148px;
+  height: auto;
+}
+.first-screen__phone {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 -16px;
+  padding: 0 16px;
+  overflow: hidden;
+}
+.first-screen__phone::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  max-width: 1000px;
+  width: 80%;
+  aspect-ratio: 3/1;
+  background: url(../assets/ellipse-fs.svg) center/cover no-repeat;
+  -webkit-transform: translate3d(-50%, 40%, 0);
+          transform: translate3d(-50%, 40%, 0);
+  -webkit-filter: blur(80px);
+          filter: blur(80px);
+}
+@media (max-width: 576px) {
+  .first-screen__phone::before {
+    display: none;
+  }
+}
+.first-screen__phone-image {
+  position: relative;
+  z-index: 10;
+  display: block;
+  max-width: 100%;
+  width: 506px;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .first-screen__phone-image {
+    width: 346px;
+  }
+}
+.first-screen__iherb {
+  padding: 40px 0;
+}
+.first-screen__iherb-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 24px;
+}
+.first-screen__iherb-logo-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.first-screen__iherb-text {
+  max-width: 480px;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #33363c;
+}

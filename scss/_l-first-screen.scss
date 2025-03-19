@@ -1,0 +1,168 @@
+.first-screen {
+  padding: 36px 0 0;
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 9px 16px;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #6b5100;
+    border-radius: 40px;
+    background-color: #fed350;
+
+    &::before {
+      content: '';
+      display: block;
+      flex: 0 0 auto;
+      width: 20px;
+      aspect-ratio: 1 / 1;
+      background: url(..//assets/icons/heart.svg) center / cover no-repeat;
+    }
+  }
+
+  &__title {
+    max-width: 748px;
+    margin: 24px auto;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 120%;
+    text-align: center;
+    color: #33363c;
+
+    @include laptop {
+      font-size: 48px;
+    }
+
+    @include mobile {
+      margin: 24px auto 16px;
+      font-size: 32px;
+    }
+  }
+
+  &__description {
+    max-width: 580px;
+    margin: 24px auto;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #33363c;
+
+    @include laptop {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      margin: 16px auto 24px;
+      font-size: 16px;
+    }
+  }
+
+  &__download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 0 24px;
+
+    @include mobile {
+      flex-wrap: wrap;
+      margin: 24px 0 32px;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      width: fit-content;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 50px;
+      background-color: #000000;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 148px;
+        height: auto;
+      }
+    }
+  }
+
+  &__phone {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 -16px;
+    padding: 0 16px;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      z-index: 1;
+      display: block;
+      max-width: 1000px;
+      width: 80%;
+      aspect-ratio: 3 / 1;
+      background: url(../assets/ellipse-fs.svg) center / cover no-repeat;
+      transform: translate3d(-50%, 40%, 0);
+      filter: blur(80px);
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &-image {
+      position: relative;
+      z-index: 10;
+      display: block;
+      max-width: 100%;
+      width: 506px;
+      height: auto;
+
+      @include mobile {
+        width: 346px;
+      }
+    }
+  }
+
+  &__iherb {
+    padding: 40px 0;
+
+    &-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 00 0 24px;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-text {
+      max-width: 480px;
+      margin: 0 auto;
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+      color: #33363c;
+    }
+  }
+}
