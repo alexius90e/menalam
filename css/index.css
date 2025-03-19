@@ -995,6 +995,9 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 24px;
 }
 .reviews__review {
@@ -1038,6 +1041,14 @@ img {
     min-height: auto;
     padding: 16px;
     border-radius: 16px;
+  }
+}
+.reviews__review:nth-child(2) {
+  margin-top: 92px;
+}
+@media (max-width: 1024px) {
+  .reviews__review:nth-child(2) {
+    margin-top: 0;
   }
 }
 .reviews__review-text {

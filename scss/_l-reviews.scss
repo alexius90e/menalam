@@ -64,6 +64,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     gap: 24px;
   }
 
@@ -93,6 +94,14 @@
       min-height: auto;
       padding: 16px;
       border-radius: 16px;
+    }
+
+    &:nth-child(2) {
+      margin-top: 92px;
+
+      @include laptop {
+        margin-top: 0;
+      }
     }
 
     &-text {
