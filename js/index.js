@@ -21,3 +21,22 @@ if (headerBurgerButton && headerNav) {
     }
   });
 }
+
+const supplementsSwiper = new Swiper('.supplements .swiper', {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    576: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 2.25,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
