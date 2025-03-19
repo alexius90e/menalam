@@ -70,6 +70,7 @@
     border-radius: 56px;
 
     @include laptop {
+      padding: 32px 16px 56px;
       border-radius: 36px;
     }
 
@@ -106,9 +107,9 @@
       font-size: 24px;
       text-align: center;
       color: #33363c;
-      
+
       @include laptop {
-        width: 100%;
+        max-width: none;
       }
     }
 
