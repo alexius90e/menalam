@@ -1,4 +1,4 @@
-.wellness {
+.needs {
   padding: 80px 0;
 
   @include laptop {
@@ -17,9 +17,9 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 162%;
-    color: #510d04;
+    color: #fbb6d5;
     border-radius: 50px;
-    background-color: #fed130;
+    background-color: #81013a;
 
     @include mobile {
       margin: 0 auto 16px;
@@ -27,7 +27,7 @@
   }
 
   &__title {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 0 80px;
     font-weight: 700;
     font-size: 56px;
@@ -72,8 +72,8 @@
       &-slide {
         height: auto;
 
-        &:nth-child(1),
-        &:nth-child(4) {
+        &:nth-child(2),
+        &:nth-child(3) {
           flex: 0 0 calc(43.4%);
 
           @include laptop {
@@ -81,8 +81,8 @@
           }
         }
 
-        &:nth-child(2),
-        &:nth-child(3) {
+        &:nth-child(1),
+        &:nth-child(4) {
           flex: 0 0 calc(100% - 43.4% - 24px);
 
           @include laptop {
@@ -94,26 +94,30 @@
   }
 
   &__slide {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     padding: 56px;
     box-sizing: border-box;
+    overflow: hidden;
     border-radius: 56px;
     background-color: #ffeacb;
 
     @include laptop {
-      padding: 32px;
+      padding: 56px 32px;
       border-radius: 32px;
     }
 
     @include mobile {
-      padding: 24px;
+      padding: 56px 24px;
       border-radius: 24px;
     }
 
     &-title {
-      margin: 0 0 16px;
+      margin: 0 0 8px;
       font-weight: 700;
       font-size: 40px;
+      text-align: center;
       color: #33363c;
 
       @include laptop {
@@ -122,18 +126,20 @@
     }
 
     &-subtitle {
-      margin: 0 0 56px;
+      max-width: 400px;
+      margin: 0 auto 56px;
       font-weight: 500;
       font-size: 24px;
+      text-align: center;
       color: #33363c;
 
       @include laptop {
-        margin: 0 0 32px;
+        margin: 0 auto 32px;
         font-size: 20px;
       }
 
       @include mobile {
-        margin: 0 0 16px;
+        margin: 0 auto 16px;
         font-size: 16px;
       }
     }
@@ -146,65 +152,83 @@
         display: block;
         max-width: 100%;
         height: auto;
-
-        @include mobile {
-          max-height: 210px;
-        }
       }
     }
 
     &_first {
-      background-color: #ffeacb;
-    }
-
-    &_second {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
       background-color: #ececfb;
     }
 
-    &_second &-subtitle {
-      margin-bottom: 0;
+    &_second {
+      background-color: #f1d5b7;
     }
 
     &_second &-figure {
-      margin-bottom: 56px;
+      margin: 0 -56px;
 
       @include laptop {
-        margin: 0 0 32px;
+        margin: 0 -32px;
       }
 
       @include mobile {
-        margin: 0 0 16px;
+        margin: 0 -24px;
       }
     }
 
     &_third {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      background-color: #eaeed3;
+      padding-bottom: 0;
+      background-color: #bdbe51;
+    }
+
+    &_third &-title,
+    &_third &-subtitle {
+      color: #ffffff;
     }
 
     &_third &-subtitle {
-      margin-bottom: 0;
+      margin: 0 auto;
     }
 
     &_third &-figure {
-      margin-bottom: 56px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex: 1 1 auto;
+      margin: -56px -56px 0;
 
       @include laptop {
-        margin: 0 0 32px;
+        margin: -32px -32px 0;
       }
 
       @include mobile {
-        margin: 0 0 16px;
+        margin: -24px -24px 0;
       }
     }
 
     &_fourth {
-      background-color: #ffd9d8;
+      padding-bottom: 0;
+      background-color: #fd706c;
+    }
+
+    &_fourth &-title,
+    &_fourth &-subtitle {
+      color: #ffffff;
+    }
+
+    &_fourth &-figure {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex: 1 1 auto;
+      margin: 0 -56px;
+
+      @include laptop {
+        margin: 0 -32px;
+      }
+
+      @include mobile {
+        margin: 0 -24px;
+      }
     }
   }
 }

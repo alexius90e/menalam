@@ -22,6 +22,24 @@ if (headerBurgerButton && headerNav) {
   });
 }
 
+const needsSwiper = new Swiper('.needs .swiper', {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 24,
+    },
+    768: {
+      slidesPerView: 1.25,
+    },
+    1024: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+  },
+});
+
 const wellnessSwiper = new Swiper('.wellness .swiper', {
   slidesPerView: 1,
   spaceBetween: 24,
