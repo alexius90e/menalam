@@ -1,2 +1,237 @@
 .header {
+  position: relative;
+  z-index: 1000;
+  padding: 10px 0;
+  background-color: #ffffff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+
+  & .container {
+    max-width: 1472px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 10;
+    display: block;
+    flex: 0 0 auto;
+    width: fit-content;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 60px;
+        height: auto;
+      }
+
+      &-text {
+        display: inline-block;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 108%;
+        color: #303030;
+      }
+    }
+  }
+
+  &__nav {
+    position: relative;
+    z-index: 10;
+
+    @include laptop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      overflow: hidden;
+      background-color: rgba($color: #000000, $alpha: 0);
+      transition-property: background-color;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.4s;
+    }
+
+    &.active {
+      @include laptop {
+        background-color: rgba($color: #000000, $alpha: 0.2);
+      }
+    }
+
+    &-menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+
+      @include laptop {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 360px;
+        width: 100%;
+        padding: 100px 16px 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.1);
+        transform: translateX(110dvw);
+        pointer-events: none;
+        transition-property: transform;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.4s;
+      }
+
+      @include mobile {
+        max-width: none;
+      }
+
+      &-item {
+        flex: 0 0 auto;
+
+        @include laptop {
+          width: 100%;
+        }
+
+        &-link {
+          display: inline-block;
+          padding: 10px 16px;
+          box-sizing: border-box;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 162%;
+          color: #303030;
+          transition: color ease-in-out 0.2s;
+          cursor: pointer;
+
+          @include laptop {
+            width: 100%;
+          }
+
+          &:hover {
+            color: #fd706c;
+          }
+
+          &:active {
+            color: #dd423d;
+          }
+        }
+
+        &-button {
+          display: inline-block;
+          padding: 10px 24px;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 162%;
+          color: #fff;
+          border: none;
+          border-radius: 50px;
+          background-color: #33363c;
+          transition: background-color ease-in-out 0.2s;
+          cursor: pointer;
+
+          @include laptop {
+            margin-left: 16px;
+          }
+
+          &:hover {
+            background-color: #fd706c;
+          }
+
+          &:active {
+            background-color: #dd423d;
+          }
+        }
+      }
+    }
+
+    &.active &-menu {
+      @include laptop {
+        transform: translateX(0dvw);
+        pointer-events: all;
+      }
+    }
+  }
+
+  &__burger {
+    position: relative;
+    z-index: 10;
+    display: none;
+    flex: 0 0 auto;
+
+    @include laptop {
+      display: block;
+    }
+
+    &-button {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: none;
+      background-color: #ffffff;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 28px;
+        height: 2px;
+        background-color: #303030;
+        transition: transform ease-in-out 0.2s;
+      }
+
+      &::before {
+        transform: translate3d(-50%, calc(-50% + 4px), 0);
+      }
+
+      &::after {
+        transform: translate3d(-50%, calc(-50% - 4px), 0);
+      }
+
+      &.active {
+        &::before {
+          transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+        }
+
+        &::after {
+          transform: translate3d(-50%, -50%, 0) rotate(45deg);
+        }
+      }
+    }
+  }
 }
