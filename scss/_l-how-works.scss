@@ -21,9 +21,7 @@
     border-radius: 50px;
     background-color: #cdf545;
 
-    @include mobile {
-      margin: 0 auto 16px;
-    }
+
   }
 
   &__title {

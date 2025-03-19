@@ -1,3 +1,142 @@
 .callback {
-  
+  background-color: #fcf7f0;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    padding: 80px 0;
+
+    @include laptop {
+      flex-direction: column;
+      padding: 60px 0;
+    }
+
+    @include mobile {
+      padding: 40px 0;
+    }
+  }
+
+  &__chat {
+    flex: 1 1 582px;
+
+    @include laptop {
+      flex: 0 1 auto;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__info {
+    flex: 1 1 642px;
+
+    @include laptop {
+      flex: 0 1 auto;
+    }
+
+    &-tag {
+      display: block;
+      width: fit-content;
+      padding: 8px 16px;
+      margin: 0 0 16px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 162%;
+      color: #ffdca6;
+      border-radius: 50px;
+      background-color: #d6694c;
+    }
+
+    &-title {
+      margin: 0 0 32px;
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 120%;
+      color: #33363c;
+
+      @include laptop {
+        font-size: 48px;
+      }
+
+      @include mobile {
+        font-size: 32px;
+      }
+    }
+
+    &-form {
+      position: relative;
+
+      &-input {
+        display: inline-block;
+        width: 100%;
+        padding: 24px;
+        box-sizing: border-box;
+        padding-right: 190px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        color: #949494;
+        border: none;
+        border-radius: 40px;
+
+        @include mobile {
+          padding: 16px 24px;
+          padding-right: 170px;
+          font-size: 16px;
+          line-height: 164%;
+        }
+      }
+
+      &-button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        bottom: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 32px;
+        box-sizing: border-box;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 162%;
+        color: #fff;
+        border: none;
+        border-radius: 40px;
+        background-color: #df9358;
+        transition: background-color ease-in-out 0.2s;
+        cursor: pointer;
+
+        @include mobile {
+          padding: 8px 20px;
+          font-size: 16px;
+        }
+
+        &:hover {
+          background-color: #cd7f43;
+        }
+
+        &:active {
+          background-color: #cd7b3c;
+        }
+      }
+    }
+  }
+
+  &__landscape {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
