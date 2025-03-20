@@ -575,6 +575,11 @@ img {
   border-radius: 50px;
   background-color: #cdf545;
 }
+@media (max-width: 576px) {
+  .how-works__tag {
+    margin: 0 auto 16px;
+  }
+}
 .how-works__title {
   margin: 0 0 80px;
   font-weight: 700;

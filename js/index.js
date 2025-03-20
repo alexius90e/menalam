@@ -27,11 +27,11 @@ const needsSwiper = new Swiper('.needs .swiper', {
   spaceBetween: 24,
   breakpoints: {
     320: {
-      slidesPerView: 1,
+      slidesPerView: 1.2,
       spaceBetween: 24,
     },
     768: {
-      slidesPerView: 1.25,
+      slidesPerView: 1.4,
     },
     1024: {
       slidesPerView: 1,
@@ -45,11 +45,11 @@ const wellnessSwiper = new Swiper('.wellness .swiper', {
   spaceBetween: 24,
   breakpoints: {
     320: {
-      slidesPerView: 1,
+      slidesPerView: 1.2,
       spaceBetween: 24,
     },
     768: {
-      slidesPerView: 1.25,
+      slidesPerView: 1.4,
     },
     1024: {
       slidesPerView: 1,
