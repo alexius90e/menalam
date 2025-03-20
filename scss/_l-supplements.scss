@@ -54,10 +54,6 @@
       margin: 0 0 64px;
     }
 
-    @include mobile {
-      margin: 0 -16px 64px;
-    }
-
     & .swiper {
       &-slide {
         height: auto;

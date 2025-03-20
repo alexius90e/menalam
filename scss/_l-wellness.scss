@@ -47,11 +47,6 @@
   }
 
   &__slider {
-
-    @include mobile {
-      margin:  0 -16px;
-    }
-
     & .swiper {
       overflow: visible;
 

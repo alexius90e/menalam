@@ -24,25 +24,19 @@ if (headerBurgerButton && headerNav) {
 
 const needsSwiper = new Swiper('.needs .swiper', {
   slidesPerView: 1,
-  spaceBetween: 24,
+  spaceBetween: 12,
   breakpoints: {
     320: {
-      slidesPerView: 1,
-      slidesOffsetBefore: 106,
-      slidesOffsetAfter: 106,
-      spaceBetween: 24,
-      initialSlide: 1,
-    },
-    576: {
       slidesPerView: 1.2,
-      slidesOffsetBefore: 0,
-      initialSlide: 0,
+      spaceBetween: 12,
+      centeredSlides: true,
     },
     768: {
       slidesPerView: 1.4,
     },
     1024: {
       slidesPerView: 1,
+      centeredSlides: false,
       spaceBetween: 0,
     },
   },
@@ -50,19 +44,12 @@ const needsSwiper = new Swiper('.needs .swiper', {
 
 const wellnessSwiper = new Swiper('.wellness .swiper', {
   slidesPerView: 1,
-  spaceBetween: 24,
+  spaceBetween: 12,
   breakpoints: {
     320: {
-      slidesPerView: 1,
-      slidesOffsetBefore: 210,
-      slidesOffsetAfter: 210,
-      spaceBetween: 24,
-      initialSlide: 1,
-    },
-    576: {
       slidesPerView: 1.2,
-      slidesOffsetBefore: 0,
-      initialSlide: 0,
+      spaceBetween: 12,
+      centeredSlides: true,
     },
     768: {
       slidesPerView: 1.4,
@@ -70,31 +57,26 @@ const wellnessSwiper = new Swiper('.wellness .swiper', {
     1024: {
       slidesPerView: 1,
       spaceBetween: 0,
+      centeredSlides: false,
     },
   },
 });
 
 const supplementsSwiper = new Swiper('.supplements .swiper', {
   slidesPerView: 1,
-  spaceBetween: 24,
+  spaceBetween: 12,
   breakpoints: {
     320: {
-      slidesPerView: 1,
-      slidesOffsetBefore: -50,
-      slidesOffsetAfter: -50,
-      spaceBetween: 24,
-      initialSlide: 1,
-    },
-    576: {
       slidesPerView: 1.2,
-      slidesOffsetBefore: 0,
-      initialSlide: 0,
+      spaceBetween: 12,
+      centeredSlides: true,
     },
     768: {
       slidesPerView: 1.4,
     },
     1024: {
       slidesPerView: 3,
+      centeredSlides: false,
     },
   },
 });
