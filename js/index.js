@@ -89,4 +89,10 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-observer.observe(document.querySelector('.how-works__step_second .how-works__step-figure-image'));
+const hwStep2Image = document.querySelector(
+  '.how-works__step_second .how-works__step-figure-image'
+);
+
+if (hwStep2Image) {
+  observer.observe(hwStep2Image);
+}
