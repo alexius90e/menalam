@@ -541,6 +541,7 @@ img {
   right: 4%;
   bottom: 0;
   aspect-ratio: 440/910;
+  overflow: hidden;
 }
 .first-screen__phone-content-screen-image {
   display: block;
