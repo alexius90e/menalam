@@ -80,3 +80,13 @@ const supplementsSwiper = new Swiper('.supplements .swiper', {
     },
   },
 });
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+    }
+  });
+});
+
+observer.observe(document.querySelector('.how-works__step_second .how-works__step-figure-image'));

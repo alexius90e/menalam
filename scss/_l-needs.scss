@@ -75,18 +75,22 @@
         &:nth-child(2),
         &:nth-child(3) {
           flex: 0 0 calc(43.4%);
+          max-width: calc(43.4%);
 
           @include laptop {
             flex: 0 0 auto;
+            max-width: none;
           }
         }
 
         &:nth-child(1),
         &:nth-child(4) {
           flex: 0 0 calc(100% - 43.4% - 24px);
+          max-width: calc(100% - 43.4% - 24px);
 
           @include laptop {
             flex: 0 0 auto;
+            max-width: none;
           }
         }
       }
@@ -185,19 +189,64 @@
       background-color: #ececfb;
     }
 
+    &_first &-figure {
+      position: relative;
+
+      &-dots {
+        position: absolute;
+        top: 54%;
+        left: 37%;
+        display: block;
+        max-width: 100%;
+        width: 11%;
+      }
+    }
+
     &_second {
       background-color: #f1d5b7;
     }
 
     &_second &-figure {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 15px;
+      flex: 1 1 auto;
       margin: 0 -56px;
+      overflow: hidden;
 
       @include laptop {
         margin: 0 -32px;
       }
 
       @include mobile {
+        min-height: 240px;
         margin: 0 -24px;
+      }
+
+      @keyframes imgAnimation {
+        from {
+          transform: translateX(calc(-20.5%));
+        }
+        to {
+          transform: translateX(calc(-54.8%));
+        }
+      }
+
+      &-image {
+        display: block;
+        max-width: none;
+        width: 400%;
+        aspect-ratio: 2277 / 304;
+        animation-name: imgAnimation;
+        animation-timing-function: linear;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+
+        @include mobile {
+          height: 240px;
+        }
       }
     }
 

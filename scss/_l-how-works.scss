@@ -177,6 +177,18 @@
 
     &_second {
       background-color: #f9ecdb;
+      overflow: hidden;
+    }
+
+    &_second &-figure {
+      overflow: hidden;
+    }
+
+    &_second &-figure-image {
+      &.animate {
+        animation: fadeInUp;
+        animation-duration: 1s;
+      }
     }
   }
 }
