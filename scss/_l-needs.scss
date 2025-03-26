@@ -221,31 +221,38 @@
       }
 
       @include mobile {
-        min-height: 240px;
         margin: 0 -24px;
       }
 
-      @keyframes imgAnimation {
+      @keyframes scroll {
         from {
-          transform: translateX(calc(-20.5%));
+          transform: translateX(0);
         }
         to {
-          transform: translateX(calc(-54.8%));
+          transform: translateX(-50%);
         }
       }
 
-      &-image {
-        display: block;
-        max-width: none;
-        width: 400%;
-        aspect-ratio: 2277 / 304;
-        animation-name: imgAnimation;
-        animation-timing-function: linear;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
+      &-images {
+        display: flex;
+        min-width: calc(1371px * 2);
+        animation: scroll linear 10s infinite;
 
         @include mobile {
-          height: 240px;
+          min-width: calc(1082px * 2);
+        }
+
+        &-item {
+          display: block;
+          flex: 0 0 auto;
+          max-width: 100%;
+          width: 1371px;
+          height: 304px;
+
+          @include mobile {
+            width: 1082px;
+            height: 240px;
+          }
         }
       }
     }

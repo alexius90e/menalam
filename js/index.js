@@ -96,3 +96,14 @@ const hwStep2Image = document.querySelector(
 if (hwStep2Image) {
   observer.observe(hwStep2Image);
 }
+
+window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset;
+  const layers = document.querySelectorAll('.parallax-layer');
+
+  layers.forEach((layer) => {
+    const speed = 0.5;
+    const yPos = -(scrolled * speed);
+    layer.style.transform = `translateY(${yPos}px)`;
+  });
+});
