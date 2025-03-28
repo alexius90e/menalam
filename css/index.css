@@ -863,11 +863,11 @@ img {
   }
 }
 .supplements__slider {
-  margin: 0 0 80px;
+  margin: 0 0 24px;
 }
 @media (max-width: 1024px) {
   .supplements__slider {
-    margin: 0 0 64px;
+    margin: 0 0 40px;
   }
 }
 .supplements__slider .swiper-slide {
@@ -903,7 +903,7 @@ img {
   background-color: #ececfb;
 }
 .supplements__slide_third {
-  background-color: #f1d5b7;
+  background-color: #ffd9d8;
 }
 .supplements__slide-icon {
   margin: 0 -24px 32px;
@@ -979,6 +979,15 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 56px 40px 0;
+  border-radius: 56px;
+  background-color: #fafafa;
+}
+@media (max-width: 1024px) {
+  .supplements__phone {
+    padding: 24px 20px 0;
+    border-radius: 24px;
+  }
 }
 .supplements__phone-image {
   display: block;

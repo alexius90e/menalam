@@ -48,10 +48,10 @@
   }
 
   &__slider {
-    margin: 0 0 80px;
+    margin: 0 0 24px;
 
     @include laptop {
-      margin: 0 0 64px;
+      margin: 0 0 40px;
     }
 
     & .swiper {
@@ -90,7 +90,7 @@
     }
 
     &_third {
-      background-color: #f1d5b7;
+      background-color: #ffd9d8;
     }
 
     &-icon {
@@ -159,6 +159,14 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    padding: 56px 40px 0;
+    border-radius: 56px;
+    background-color: #fafafa;
+
+    @include laptop {
+      padding: 24px 20px 0;
+      border-radius: 24px;
+    }
 
     &-image {
       display: block;
