@@ -236,7 +236,7 @@
       &-images {
         display: flex;
         min-width: calc(1371px * 2);
-        animation: scroll linear 10s infinite;
+        animation: scroll linear 22s infinite;
 
         @include mobile {
           min-width: calc(1082px * 2);

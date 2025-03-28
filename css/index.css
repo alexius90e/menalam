@@ -1694,8 +1694,8 @@ img {
   display: -ms-flexbox;
   display: flex;
   min-width: 2742px;
-  -webkit-animation: scroll linear 10s infinite;
-          animation: scroll linear 10s infinite;
+  -webkit-animation: scroll linear 22s infinite;
+          animation: scroll linear 22s infinite;
 }
 @media (max-width: 576px) {
   .needs__slide_second .needs__slide-figure-images {
