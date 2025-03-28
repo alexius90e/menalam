@@ -237,6 +237,7 @@
         display: flex;
         min-width: calc(1371px * 2);
         animation: scroll linear 22s infinite;
+        will-change: transform;
 
         @include mobile {
           min-width: calc(1082px * 2);

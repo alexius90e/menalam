@@ -47,6 +47,12 @@
   }
 
   &__slider {
+
+    @include tablet {
+      margin: 0 -16px;
+
+    }
+
     & .swiper {
       overflow: visible;
 

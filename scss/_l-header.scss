@@ -55,6 +55,10 @@
         font-size: 24px;
         line-height: 108%;
         color: #303030;
+
+        @include mobile {
+          display: none;
+        }
       }
     }
   }
@@ -187,56 +191,36 @@
     }
   }
 
-  &__burger {
+  &__join {
     position: relative;
     z-index: 10;
-    display: none;
-    flex: 0 0 auto;
-
-    @include laptop {
-      display: block;
-    }
+    flex:  0 0 auto;
 
     &-button {
-      position: relative;
       display: inline-block;
-      width: 40px;
-      height: 40px;
-      padding: 0;
+      padding: 10px 24px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 162%;
+      color: #fff;
       border: none;
-      background-color: #ffffff;
+      border-radius: 50px;
+      background-color: #33363c;
+      transition: background-color ease-in-out 0.2s;
       cursor: pointer;
 
-      &::before,
-      &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: block;
-        width: 28px;
-        height: 2px;
-        background-color: #303030;
-        transition: transform ease-in-out 0.2s;
+      @include laptop {
+        margin-left: 16px;
       }
 
-      &::before {
-        transform: translate3d(-50%, calc(-50% + 4px), 0);
+      &:hover {
+        background-color: #fd706c;
       }
 
-      &::after {
-        transform: translate3d(-50%, calc(-50% - 4px), 0);
-      }
-
-      &.active {
-        &::before {
-          transform: translate3d(-50%, -50%, 0) rotate(-45deg);
-        }
-
-        &::after {
-          transform: translate3d(-50%, -50%, 0) rotate(45deg);
-        }
+      &:active {
+        background-color: #dd423d;
       }
     }
   }
+
 }

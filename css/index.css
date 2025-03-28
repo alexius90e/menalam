@@ -136,6 +136,11 @@ img {
   line-height: 108%;
   color: #303030;
 }
+@media (max-width: 576px) {
+  .header__logo-link-text {
+    display: none;
+  }
+}
 .header__nav {
   position: relative;
   z-index: 10;
@@ -290,58 +295,37 @@ img {
     pointer-events: all;
   }
 }
-.header__burger {
+.header__join {
   position: relative;
   z-index: 10;
-  display: none;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
 }
-@media (max-width: 1024px) {
-  .header__burger {
-    display: block;
-  }
-}
-.header__burger-button {
-  position: relative;
+.header__join-button {
   display: inline-block;
-  width: 40px;
-  height: 40px;
-  padding: 0;
+  padding: 10px 24px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 162%;
+  color: #fff;
   border: none;
-  background-color: #ffffff;
+  border-radius: 50px;
+  background-color: #33363c;
+  -webkit-transition: background-color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.2s;
   cursor: pointer;
 }
-.header__burger-button::before, .header__burger-button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 28px;
-  height: 2px;
-  background-color: #303030;
-  -webkit-transition: -webkit-transform ease-in-out 0.2s;
-  transition: -webkit-transform ease-in-out 0.2s;
-  transition: transform ease-in-out 0.2s;
-  transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
+@media (max-width: 1024px) {
+  .header__join-button {
+    margin-left: 16px;
+  }
 }
-.header__burger-button::before {
-  -webkit-transform: translate3d(-50%, calc(-50% + 4px), 0);
-          transform: translate3d(-50%, calc(-50% + 4px), 0);
+.header__join-button:hover {
+  background-color: #fd706c;
 }
-.header__burger-button::after {
-  -webkit-transform: translate3d(-50%, calc(-50% - 4px), 0);
-          transform: translate3d(-50%, calc(-50% - 4px), 0);
-}
-.header__burger-button.active::before {
-  -webkit-transform: translate3d(-50%, -50%, 0) rotate(-45deg);
-          transform: translate3d(-50%, -50%, 0) rotate(-45deg);
-}
-.header__burger-button.active::after {
-  -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
-          transform: translate3d(-50%, -50%, 0) rotate(45deg);
+.header__join-button:active {
+  background-color: #dd423d;
 }
 
 .main {
@@ -1696,6 +1680,7 @@ img {
   min-width: 2742px;
   -webkit-animation: scroll linear 22s infinite;
           animation: scroll linear 22s infinite;
+  will-change: transform;
 }
 @media (max-width: 576px) {
   .needs__slide_second .needs__slide-figure-images {
@@ -1836,6 +1821,11 @@ img {
     margin-bottom: 40px;
     font-size: 32px;
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .wellness__slider {
+    margin: 0 -16px;
   }
 }
 .wellness__slider .swiper {
