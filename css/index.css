@@ -354,9 +354,9 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
-  color: #6b5100;
+  color: #33363c;
   border-radius: 40px;
-  background-color: #fed350;
+  background-color: #f9ecdb;
 }
 .first-screen__tag::before {
   content: "";
@@ -585,9 +585,9 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 162%;
-  color: #00541f;
+  color: #33363c;
   border-radius: 50px;
-  background-color: #cdf545;
+  background-color: #f9ecdb;
 }
 @media (max-width: 576px) {
   .how-works__tag {
@@ -831,9 +831,9 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 162%;
-  color: #ffffff;
+  color: #33363c;
   border-radius: 50px;
-  background-color: #3d94f3;
+  background-color: #f9ecdb;
 }
 @media (max-width: 576px) {
   .supplements__tag {
@@ -1018,9 +1018,9 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 162%;
-  color: #4b0656;
+  color: #33363c;
   border-radius: 50px;
-  background-color: #e481c2;
+  background-color: #f9ecdb;
 }
 .reviews__title {
   margin: 0 0 16px;
@@ -1411,9 +1411,9 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 162%;
-  color: #fbb6d5;
+  color: #33363c;
   border-radius: 50px;
-  background-color: #81013a;
+  background-color: #f9ecdb;
 }
 @media (max-width: 576px) {
   .needs__tag {
@@ -1793,9 +1793,9 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 162%;
-  color: #510d04;
+  color: #33363c;
   border-radius: 50px;
-  background-color: #fed130;
+  background-color: #f9ecdb;
 }
 @media (max-width: 576px) {
   .wellness__tag {
